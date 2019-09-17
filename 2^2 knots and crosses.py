@@ -12,4 +12,5 @@ def Check_win(L,Size):
     L=L[:Size**2]
     win=False
     for i in range(Size):
-       win=win or L[Size*i]==L[Size*i+1] or L[Size*i]==L[Size*i+Size] or L[Size*i]==L[Size*i+Size+1]
+        for j in [1,Size,Size+1]:
+            win= win or L[Size*i]==L[Size*i+j]
